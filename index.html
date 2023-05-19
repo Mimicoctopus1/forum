@@ -31,8 +31,29 @@
     </style>
     <body>
         <div class = "header">
-            <p class = "forumHeader">OJVJPJ<span class = "clear">----</span>4M</p>
+            <p class = "forumHeader"><a href = "https://mimicoctopus1.github.io">OJVJPJ</a><span class = "clear">----</span>4M</p>
             <h6 class = "sideNoteHeader">OJVJ Forum</h6>
-        </div>
+        </div><br><br><br>
+        <input type = "text" class = "chatBox" value = "Would you like to say something?">
+        <input type = "button" class = "chatSubmit" value = "Submit">
+        <p class = "message"></p>
+        
+        
+        
+        <script>
+            var message = document.getElementsByClassName("message")[0];
+            var chatBox = document.getElementsByClassName("chatBox")[0];
+            var chatSubmit = document.getElementsByClassName("chatSubmit")[0];
+            var emptyValue = function(e) {
+                if(chatBox.value === "Would you like to say something?"){
+                chatBox.value = "";
+                }
+            };
+            var submit = function(e) {
+                message.innerHTML = "Submit successful!";
+            };
+            chatBox.addEventListener("click", emptyValue);
+            chatSubmit.addEventListener("click", submit);
+        </script>
     </body>
 </html>
